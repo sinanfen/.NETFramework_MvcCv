@@ -1,0 +1,63 @@
+﻿
+@{
+    ViewBag.Title = "DeneyimEkle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <!-- left column -->
+            <div class="col-md-12">
+                <!-- jquery validation -->
+                <div class="card card-info">
+                    <div class="card-header">
+                        <h3 class="card-title">Admin Kayıt Sayfası</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <!-- form start -->
+                    <form id="quickForm" method="post">
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Kullanıcı Adı</label>
+                                <input type="text" name="KullaniciAdi" class="form-control" placeholder="Kullanıcı adınız..">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Şifre</label>
+                                <input type="password" id="myInput" name="Sifre" class="form-control" placeholder="Şifreniz..">
+                                <span onclick="myFunction()" toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                            </div>
+                        </div>
+                        <!-- /.card-body -->
+                        <div class="card-footer">
+                            <button type="submit" class="btn bg-gradient-info">Kaydet</button>
+                        </div>
+                    </form>
+                </div>
+                <!-- /.card -->
+            </div>
+            <!--/.col (left) -->
+            <!-- right column -->
+            <div class="col-md-6">
+
+            </div>
+            <!--/.col (right) -->
+        </div>
+        <!-- /.row -->
+    </div><!-- /.container-fluid -->
+</section>
+<!-- /.content -->
+<link href="~/Login_v16/css/myStyle.css" rel="stylesheet" />
+<script>
+    function myFunction() {
+        var x = document.getElementById("myInput");
+        if (x.type === "password") {
+            x.type = "text";
+        }
+        else {
+            x.type = "password";
+
+        }
+    }
+
+</script>

@@ -1,0 +1,57 @@
+﻿@model MvcCv.Models.Entity.TblEgitimlerim
+@{
+    ViewBag.Title = "YeniYetenek";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <!-- left column -->
+            <div class="col-md-12">
+                <!-- jquery validation -->
+                <div class="card card-info">
+                    <div class="card-header">
+                        <h3 class="card-title">Eğitim bilgisi ekleme sayfası</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <!-- form start -->
+                    <form id="quickForm" method="post">
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Başlık</label>
+                                @Html.TextBoxFor(x => x.Baslik, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(x=>x.Baslik,"", new { @style = "color:red" })
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Alt Başlık 1</label>
+                                @Html.TextBoxFor(x => x.AltBaslik1, new { @class = "form-control" })
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Alt Başlık 2</label>
+                                @Html.TextBoxFor(x => x.AltBaslik2, new { @class = "form-control" })
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Tarih</label>
+                                @Html.TextBoxFor(x => x.Tarih, new { @class = "form-control" })
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Genel Not Ortalaması</label>
+                                @Html.TextBoxFor(x => x.GenelNotOrtalamasi, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(x => x.GenelNotOrtalamasi, "", new { @style = "color:red" })
+                            </div>
+                        </div>
+                        <!-- /.card-body -->
+                        <div class="card-footer">
+                            <button type="submit" class="btn bg-gradient-info">Kaydet</button>
+                        </div>
+                    </form>
+                </div>
+                <!-- /.card -->
+            </div>
+        </div>
+        <!-- /.row -->
+    </div><!-- /.container-fluid -->
+</section>
+<!-- /.content -->

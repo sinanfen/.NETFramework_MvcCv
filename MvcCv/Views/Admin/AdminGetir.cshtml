@@ -1,0 +1,60 @@
+﻿@model MvcCv.Models.Entity.TblAdmin
+@{
+    ViewBag.Title = "DeneyimGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <!-- left column -->
+            <div class="col-md-12">
+                <!-- jquery validation -->
+                <div class="card card-info">
+                    <div class="card-header">
+                        <h3 class="card-title">Admin Güncelleme Sayfası</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <!-- form start -->
+                    <form id="quickForm" method="post">
+                        <div class="card-body">
+                            @Html.HiddenFor(x => x.ID, new { @class = "form-control" })
+                            <div class="form-group">
+                                <label for="Baslik">Kullanıcı Adı</label>
+                                @Html.TextBoxFor(x => x.KullaniciAdi, new { @class = "form-control" })
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Şifre</label>
+                                @Html.TextBoxFor(x => x.Sifre, new { @class = "form-control", id = "myInput", type = "password" })
+                                <span onclick="myFunction()" toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                            </div>
+                        </div>
+                        <!-- /.card-body -->
+                        <div class="card-footer">
+                            <button type="submit" class="btn bg-gradient-warning">Güncelle</button>
+                        </div>
+                    </form>
+                </div>
+                <!-- /.card -->
+            </div>
+            <!--/.col (left) -->
+        </div>
+        <!-- /.row -->
+    </div><!-- /.container-fluid -->
+</section>
+<!-- /.content -->
+<link href="~/Login_v16/css/myStyle.css" rel="stylesheet" />
+<script>
+    function myFunction() {
+        var x = document.getElementById("myInput");
+        if (x.type === "password") {
+            x.type = "text";
+        }
+        else {
+            x.type = "password";
+
+        }
+    }
+
+</script>

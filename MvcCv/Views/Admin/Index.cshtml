@@ -1,0 +1,101 @@
+﻿@using MvcCv.Models.Entity
+@model List<TblAdmin>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+
+    string myClass;
+}
+<!DOCTYPE html>
+<html>
+
+<body class="hold-transition sidebar-mini">
+    <br />
+    <div class="wrapper">
+        <!-- Navbar -->
+        <!-- Main content -->
+        <section class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">Admin İşlemleri </h3>
+                            </div>
+                            <!-- /.card-header -->
+                            <div class="card-body">
+                                <a href="/Admin/AdminEkle/" class="btn bg-gradient-info">Admin Ekle</a>
+                                <table class="table table-bordered table-hover mt-2">
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Kullanıcı Adı</th>
+                                        <th>Şifre</th>
+                                        <th class="text-center" style="width:10%;">Durum</th>
+                                        <th style="text-align:center;">Eylem</th>
+                                    </tr>
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            <td style="width:3%;">@item.ID</td>
+                                            <td>@item.KullaniciAdi</td>
+                                            <td>
+                                                <input class="form-control" type="password" readonly value="@item.Sifre" id="myInput" />
+                                                <span onclick="myFunction()" toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                                            </td>
+                                            @if (item.Durum == true)
+                                            {
+                                                <td class="text-success text-center text-bold">Aktif</td>
+                                            }
+                                            else
+                                            {
+                                                <td class="text-danger text-center text-bold">Pasif</td>
+                                            }
+                                            <td class="text-center" style="width:15%;">
+                                                @if (item.Durum == true)
+                                                {
+                                                    <a class="btn btn-danger btn-sm" href="/Admin/AdminSil/@item.ID">
+                                                        <i class="fas fa-trash">
+                                                        </i>
+                                                        Pasif Yap
+                                                    </a>
+                                                }
+                                                else
+                                                {
+                                                     
+                                                }
+                                                <a class="btn btn-info btn-sm" href="/Admin/AdminGetir/@item.ID">
+                                                    <i class="fas fa-pencil-alt">
+                                                    </i>
+                                                    Düzenle
+                                                </a>
+                                            </td>
+
+                                        </tr>
+                                    }
+                                </table>
+                            </div>
+                        </div>
+                        <!-- /.card -->
+                    </div>
+                </div>
+            </div><!-- /.container-fluid -->
+        </section>
+        <!-- /.content -->
+    </div>
+</body>
+</html>
+
+<script>
+    function myFunction() {
+        var x = document.getElementById("myInput");
+        if (x.type === "password") {
+            x.type = "text";
+        }
+        else {
+            x.type = "password";
+
+        }
+    }
+
+</script>
+<link href="~/Login_v16/css/myStyle.css" rel="stylesheet" />

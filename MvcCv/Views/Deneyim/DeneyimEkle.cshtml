@@ -1,0 +1,56 @@
+﻿
+@{
+    ViewBag.Title = "DeneyimEkle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <!-- left column -->
+            <div class="col-md-12">
+                <!-- jquery validation -->
+                <div class="card card-info">
+                    <div class="card-header">
+                        <h3 class="card-title">Deneyim ekleme sayfası</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <!-- form start -->
+                    <form id="quickForm" method="post">
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Başlık</label>
+                                <input type="text" name="Baslik" class="form-control" placeholder="Başlık giriniz..">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Alt Başlık</label>
+                                <input type="text" name="AltBaslik" class="form-control" placeholder="Alt başlık giriniz..">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Tarih</label>
+                                <input type="text" name="Tarih" class="form-control" placeholder="Tarih giriniz..">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Açıklama</label>
+                                <textarea type="text" name="Aciklama" class="form-control" rows="4" placeholder="Açıklama giriniz.."></textarea>
+                            </div>                          
+                        </div>
+                        <!-- /.card-body -->
+                        <div class="card-footer">
+                            <button type="submit" class="btn bg-gradient-info">Kaydet</button>
+                        </div>
+                    </form>
+                </div>
+                <!-- /.card -->
+            </div>
+            <!--/.col (left) -->
+            <!-- right column -->
+            <div class="col-md-6">
+
+            </div>
+            <!--/.col (right) -->
+        </div>
+        <!-- /.row -->
+    </div><!-- /.container-fluid -->
+</section>
+<!-- /.content -->

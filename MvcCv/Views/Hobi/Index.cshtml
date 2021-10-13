@@ -1,0 +1,48 @@
+﻿@using MvcCv.Models.Entity
+@model List<TblHobilerim>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+
+@*<div class="form-group">
+        <label>Açıklama 1</label>
+        <textarea rows="6" class="form-control">@item.Aciklama1</textarea>
+        <label>Açıklama 2</label>
+        <textarea rows="6" class="form-control">@item.Aciklama2</textarea>
+    </div>*@
+
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <!-- left column -->
+            <div class="col-md-12">
+                <!-- jquery validation -->
+                <div class="card card-info">
+                    <div class="card-header">
+                        <h3 class="card-title">Hobi bilgileri güncelleme</h3>
+                    </div>
+                    @foreach (var item in Model)
+                    {
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Açıklama 1</label>
+                                <textarea type="text" name="Aciklama1" class="form-control" rows="2">@item.Aciklama1</textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Açıklama 2</label>
+                                <textarea type="text" name="Aciklama2" class="form-control" rows="4">@item.Aciklama2</textarea>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <a href="/Hobi/HobiGetir/@item.ID" class="btn bg-gradient-info">Güncelle</a>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+

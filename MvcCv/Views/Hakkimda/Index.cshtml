@@ -1,0 +1,73 @@
+﻿@using MvcCv.Models.Entity
+@model List<TblHakkimda>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <!-- left column -->
+            <div class="col-md-12">
+                <!-- jquery validation -->
+                <div class="card card-info">
+                    <div class="card-header">
+                        <h3 class="card-title">Hakkımda bilgileri güncelleme sayfası</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <!-- form start -->
+                    <form id="quickForm" method="post">
+                        @foreach (var item in Model)
+                        {
+                            <div class="card-body">
+                              
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Ad</label>
+                                    <input type="text" name="Ad" value="@item.Ad" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Soyad</label>
+                                    <input type="text" name="Soyad" value="@item.Soyad" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Mail</label>
+                                    <input type="text" name="Mail" value="@item.Mail" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Telefon</label>
+                                    <input type="text" name="Telefon" value="@item.Telefon" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Adres</label>
+                                    <textarea rows="4" class="form-control" name="Adres">@item.Adres</textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Açıklama</label>
+                                    <textarea rows="4" class="form-control" name="Aciklama">@item.Aciklama</textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Açıklama 2</label>
+                                    <textarea rows="4" class="form-control" name="Aciklama2">@item.Aciklama2</textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Görsel</label>
+                                    <input type="text" name="Gorsel" value="@item.Gorsel" class="form-control" />
+                                </div>
+                            </div>
+                        }
+                        <!-- /.card-body -->
+                        <div class="card-footer">
+                            <button type="submit" class="btn bg-gradient-warning">Güncelle</button>
+                        </div>
+                    </form>
+                </div>
+                <!-- /.card -->
+            </div>
+            <!--/.col (left) -->
+        </div>
+        <!-- /.row -->
+    </div><!-- /.container-fluid -->
+</section>
+<!-- /.content -->

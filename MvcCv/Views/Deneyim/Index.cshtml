@@ -1,0 +1,69 @@
+﻿@using MvcCv.Models.Entity
+@model List<TblDeneyimlerim>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<!DOCTYPE html>
+<html>
+
+<body class="hold-transition sidebar-mini">
+    <br />
+    <div class="wrapper">
+        <!-- Navbar -->
+        <!-- Main content -->
+        <section class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">Deneyimlerim </h3>
+                            </div>
+                            <!-- /.card-header -->
+                            <div class="card-body">
+                                <a href="/Deneyim/DeneyimEkle" class="btn bg-gradient-info">Deneyim Ekle</a>
+                                <table class="table table-bordered table-hover mt-2">
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Başlık</th>
+                                        <th>Alt Başlık</th>
+                                        <th>Açıklama</th>
+                                        <th>Tarih</th>
+                                        <th style="text-align:center;">Eylem</th>
+                                    </tr>
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            <td>@item.ID</td>
+                                            <td>@item.Baslik</td>
+                                            <td>@item.AltBaslik</td>
+                                            <td>@item.Aciklama</td>
+                                            <td width="13%">@item.Tarih</td>
+                                            <td style="width:10%;">
+                                                <a class="btn btn-danger btn-sm" href="/Deneyim/DeneyimSil/@item.ID">
+                                                    <i class="fas fa-trash">
+                                                    </i>
+                                                    Sil
+                                                </a>
+                                                <a class="btn btn-info btn-sm" href="/Deneyim/DeneyimGetir/@item.ID">
+                                                    <i class="fas fa-pencil-alt">
+                                                    </i>
+                                                    Düzenle
+                                                </a>
+                                            </td>
+
+                                        </tr>
+                                    }
+                                </table>
+                            </div>
+                        </div>
+                        <!-- /.card -->
+                    </div>
+                </div>
+            </div><!-- /.container-fluid -->
+        </section>
+        <!-- /.content -->
+    </div>
+</body>
+</html>

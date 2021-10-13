@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewBag.Title = "YeniYetenek";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <!-- left column -->
+            <div class="col-md-12">
+                <!-- jquery validation -->
+                <div class="card card-info">
+                    <div class="card-header">
+                        <h3 class="card-title">Yetenek ekleme sayfası</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <!-- form start -->
+                    <form id="quickForm" method="post">
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Yetenek açıklaması</label>
+                                <input type="text" name="Yetenek" class="form-control" placeholder="Yetenek giriniz..">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Yetenek yeterlilik derecesi</label>
+                                <input type="text" name="Oran" class="form-control" placeholder="Oran giriniz..">
+                            </div>                         
+                        </div>
+                        <!-- /.card-body -->
+                        <div class="card-footer">
+                            <button type="submit" class="btn bg-gradient-info">Kaydet</button>
+                        </div>
+                    </form>
+                </div>
+                <!-- /.card -->
+            </div>
+        </div>
+        <!-- /.row -->
+    </div><!-- /.container-fluid -->
+</section>
+<!-- /.content -->
