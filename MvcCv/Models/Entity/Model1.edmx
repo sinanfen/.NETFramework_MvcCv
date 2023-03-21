@@ -4,108 +4,108 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="DbCvModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <EntityType Name="TblAdmin">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="KullaniciAdi" Type="varchar" MaxLength="50" />
-          <Property Name="Sifre" Type="varchar" MaxLength="50" />
-          <Property Name="Durum" Type="bit" />
-        </EntityType>
-        <EntityType Name="TblDeneyimlerim">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Baslik" Type="varchar" MaxLength="100" />
-          <Property Name="AltBaslik" Type="varchar" MaxLength="100" />
-          <Property Name="Aciklama" Type="varchar(max)" />
-          <Property Name="Tarih" Type="varchar" MaxLength="100" />
-        </EntityType>
-        <EntityType Name="TblEgitimlerim">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Baslik" Type="varchar" MaxLength="100" />
-          <Property Name="AltBaslik1" Type="varchar" MaxLength="100" />
-          <Property Name="AltBaslik2" Type="varchar" MaxLength="100" />
-          <Property Name="GenelNotOrtalamasi" Type="varchar" MaxLength="10" />
-          <Property Name="Tarih" Type="varchar" MaxLength="100" />
-        </EntityType>
-        <EntityType Name="TblHakkimda">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Ad" Type="varchar" MaxLength="50" />
-          <Property Name="Soyad" Type="varchar" MaxLength="50" />
-          <Property Name="Adres" Type="varchar" MaxLength="100" />
-          <Property Name="Telefon" Type="varchar" MaxLength="20" />
-          <Property Name="Mail" Type="varchar" MaxLength="50" />
-          <Property Name="Aciklama" Type="varchar(max)" />
-          <Property Name="Aciklama2" Type="varchar(max)" />
-          <Property Name="Gorsel" Type="varchar" MaxLength="100" />
-        </EntityType>
-        <EntityType Name="TblHobilerim">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Aciklama1" Type="varchar(max)" />
-          <Property Name="Aciklama2" Type="varchar(max)" />
-        </EntityType>
-        <EntityType Name="TblIletisim">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="AdSoyad" Type="varchar" MaxLength="250" />
-          <Property Name="Mail" Type="varchar" MaxLength="100" />
-          <Property Name="Konu" Type="varchar" MaxLength="250" />
-          <Property Name="Mesaj" Type="varchar(max)" />
-          <Property Name="Tarih" Type="date" />
-        </EntityType>
-        <EntityType Name="TblSertifikalarim">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Tarih" Type="varchar" MaxLength="30" />
-          <Property Name="Aciklama" Type="varchar" MaxLength="250" />
-        </EntityType>
-        <EntityType Name="TblSosyalMedya">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Ad" Type="varchar" MaxLength="30" />
-          <Property Name="Link" Type="varchar(max)" />
-          <Property Name="Ikon" Type="varchar" MaxLength="30" />
-          <Property Name="Durum" Type="bit" />
-        </EntityType>
-        <EntityType Name="TblYeteneklerim">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Yetenek" Type="varchar" MaxLength="100" />
-          <Property Name="Oran" Type="tinyint" />
-        </EntityType>
-        <EntityContainer Name="DbCvModelStoreContainer">
-          <EntitySet Name="TblAdmin" EntityType="Self.TblAdmin" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="TblDeneyimlerim" EntityType="Self.TblDeneyimlerim" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="TblEgitimlerim" EntityType="Self.TblEgitimlerim" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="TblHakkimda" EntityType="Self.TblHakkimda" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="TblHobilerim" EntityType="Self.TblHobilerim" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="TblIletisim" EntityType="Self.TblIletisim" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="TblSertifikalarim" EntityType="Self.TblSertifikalarim" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="TblSosyalMedya" EntityType="Self.TblSosyalMedya" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="TblYeteneklerim" EntityType="Self.TblYeteneklerim" Schema="dbo" store:Type="Tables" />
-        </EntityContainer>
-      </Schema></edmx:StorageModels>
+    <Schema Namespace="DbCvModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="DbCvModelStoreContainer">
+    <EntitySet Name="TblAdmin" EntityType="DbCvModel.Store.TblAdmin" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TblDeneyimlerim" EntityType="DbCvModel.Store.TblDeneyimlerim" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TblEgitimlerim" EntityType="DbCvModel.Store.TblEgitimlerim" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TblHakkimda" EntityType="DbCvModel.Store.TblHakkimda" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TblHobilerim" EntityType="DbCvModel.Store.TblHobilerim" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TblIletisim" EntityType="DbCvModel.Store.TblIletisim" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TblSertifikalarim" EntityType="DbCvModel.Store.TblSertifikalarim" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TblYeteneklerim" EntityType="DbCvModel.Store.TblYeteneklerim" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TblSosyalMedya" EntityType="DbCvModel.Store.TblSosyalMedya" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="TblAdmin">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KullaniciAdi" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="Sifre" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="Durum" Type="bit" Nullable="true" />
+  </EntityType>
+  <EntityType Name="TblDeneyimlerim">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Baslik" Type="varchar" Nullable="true" MaxLength="100" />
+    <Property Name="AltBaslik" Type="varchar" Nullable="true" MaxLength="100" />
+    <Property Name="Aciklama" Type="varchar(max)" Nullable="true" />
+    <Property Name="Tarih" Type="varchar" Nullable="true" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="TblEgitimlerim">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Baslik" Type="varchar" Nullable="true" MaxLength="100" />
+    <Property Name="AltBaslik1" Type="varchar" Nullable="true" MaxLength="100" />
+    <Property Name="AltBaslik2" Type="varchar" Nullable="true" MaxLength="100" />
+    <Property Name="GenelNotOrtalamasi" Type="varchar" Nullable="true" MaxLength="10" />
+    <Property Name="Tarih" Type="varchar" Nullable="true" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="TblHakkimda">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ad" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="Soyad" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="Adres" Type="varchar" Nullable="true" MaxLength="100" />
+    <Property Name="Telefon" Type="varchar" Nullable="true" MaxLength="20" />
+    <Property Name="Mail" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="Aciklama" Type="varchar(max)" Nullable="true" />
+    <Property Name="Aciklama2" Type="varchar(max)" Nullable="true" />
+    <Property Name="Gorsel" Type="varchar" Nullable="true" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="TblHobilerim">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Aciklama1" Type="varchar(max)" Nullable="true" />
+    <Property Name="Aciklama2" Type="varchar(max)" Nullable="true" />
+  </EntityType>
+  <EntityType Name="TblIletisim">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AdSoyad" Type="varchar" Nullable="true" MaxLength="250" />
+    <Property Name="Mail" Type="varchar" Nullable="true" MaxLength="100" />
+    <Property Name="Konu" Type="varchar" Nullable="true" MaxLength="250" />
+    <Property Name="Mesaj" Type="varchar(max)" Nullable="true" />
+    <Property Name="Tarih" Type="datetime" Nullable="true" />
+  </EntityType>
+  <EntityType Name="TblSertifikalarim">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Aciklama" Type="varchar" Nullable="true" MaxLength="250" />
+    <Property Name="Tarih" Type="varchar" Nullable="true" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="TblYeteneklerim">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Yetenek" Type="varchar" Nullable="true" MaxLength="100" />
+    <Property Name="Oran" Type="tinyint" Nullable="true" />
+  </EntityType>
+  <EntityType Name="TblSosyalMedya">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ad" Type="varchar" Nullable="true" MaxLength="30" />
+    <Property Name="Link" Type="varchar(max)" Nullable="true" />
+    <Property Name="Ikon" Type="varchar" Nullable="true" MaxLength="30" />
+    <Property Name="Durum" Type="bit" Nullable="true" />
+  </EntityType>
+</Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="DbCvModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -213,109 +213,108 @@
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
-      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="DbCvModelStoreContainer" CdmEntityContainer="DbCvEntities1">
-          <EntitySetMapping Name="TblAdmin">
-            <EntityTypeMapping TypeName="DbCvModel.TblAdmin">
-              <MappingFragment StoreEntitySet="TblAdmin">
-                <ScalarProperty Name="Durum" ColumnName="Durum" />
-                <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="KullaniciAdi" ColumnName="KullaniciAdi" />
-                <ScalarProperty Name="Sifre" ColumnName="Sifre" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="TblDeneyimlerim">
-            <EntityTypeMapping TypeName="DbCvModel.TblDeneyimlerim">
-              <MappingFragment StoreEntitySet="TblDeneyimlerim">
-                <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="Baslik" ColumnName="Baslik" />
-                <ScalarProperty Name="AltBaslik" ColumnName="AltBaslik" />
-                <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
-                <ScalarProperty Name="Tarih" ColumnName="Tarih" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="TblEgitimlerim">
-            <EntityTypeMapping TypeName="DbCvModel.TblEgitimlerim">
-              <MappingFragment StoreEntitySet="TblEgitimlerim">
-                <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="Baslik" ColumnName="Baslik" />
-                <ScalarProperty Name="AltBaslik1" ColumnName="AltBaslik1" />
-                <ScalarProperty Name="AltBaslik2" ColumnName="AltBaslik2" />
-                <ScalarProperty Name="GenelNotOrtalamasi" ColumnName="GenelNotOrtalamasi" />
-                <ScalarProperty Name="Tarih" ColumnName="Tarih" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="TblHakkimda">
-            <EntityTypeMapping TypeName="DbCvModel.TblHakkimda">
-              <MappingFragment StoreEntitySet="TblHakkimda">
-                <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="Ad" ColumnName="Ad" />
-                <ScalarProperty Name="Soyad" ColumnName="Soyad" />
-                <ScalarProperty Name="Adres" ColumnName="Adres" />
-                <ScalarProperty Name="Telefon" ColumnName="Telefon" />
-                <ScalarProperty Name="Mail" ColumnName="Mail" />
-                <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
-                <ScalarProperty Name="Aciklama2" ColumnName="Aciklama2" />
-                <ScalarProperty Name="Gorsel" ColumnName="Gorsel" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="TblHobilerim">
-            <EntityTypeMapping TypeName="DbCvModel.TblHobilerim">
-              <MappingFragment StoreEntitySet="TblHobilerim">
-                <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="Aciklama1" ColumnName="Aciklama1" />
-                <ScalarProperty Name="Aciklama2" ColumnName="Aciklama2" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="TblIletisim">
-            <EntityTypeMapping TypeName="DbCvModel.TblIletisim">
-              <MappingFragment StoreEntitySet="TblIletisim">
-                <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="AdSoyad" ColumnName="AdSoyad" />
-                <ScalarProperty Name="Mail" ColumnName="Mail" />
-                <ScalarProperty Name="Konu" ColumnName="Konu" />
-                <ScalarProperty Name="Mesaj" ColumnName="Mesaj" />
-                <ScalarProperty Name="Tarih" ColumnName="Tarih" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="TblSertifikalarim">
-            <EntityTypeMapping TypeName="DbCvModel.TblSertifikalarim">
-              <MappingFragment StoreEntitySet="TblSertifikalarim">
-                <ScalarProperty Name="Tarih" ColumnName="Tarih" />
-                <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="TblYeteneklerim">
-            <EntityTypeMapping TypeName="DbCvModel.TblYeteneklerim">
-              <MappingFragment StoreEntitySet="TblYeteneklerim">
-                <ScalarProperty Name="Oran" ColumnName="Oran" />
-                <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="Yetenek" ColumnName="Yetenek" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="TblSosyalMedya">
-            <EntityTypeMapping TypeName="DbCvModel.TblSosyalMedya">
-              <MappingFragment StoreEntitySet="TblSosyalMedya">
-                <ScalarProperty Name="Durum" ColumnName="Durum" />
-                <ScalarProperty Name="Ikon" ColumnName="Ikon" />
-                <ScalarProperty Name="Link" ColumnName="Link" />
-                <ScalarProperty Name="Ad" ColumnName="Ad" />
-                <ScalarProperty Name="ID" ColumnName="ID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-        </EntityContainerMapping>
-      </Mapping>
-    </edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DbCvModelStoreContainer" CdmEntityContainer="DbCvEntities1">
+    <EntitySetMapping Name="TblAdmin">
+      <EntityTypeMapping TypeName="IsTypeOf(DbCvModel.TblAdmin)">
+        <MappingFragment StoreEntitySet="TblAdmin">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="KullaniciAdi" ColumnName="KullaniciAdi" />
+          <ScalarProperty Name="Sifre" ColumnName="Sifre" />
+          <ScalarProperty Name="Durum" ColumnName="Durum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblDeneyimlerim">
+      <EntityTypeMapping TypeName="IsTypeOf(DbCvModel.TblDeneyimlerim)">
+        <MappingFragment StoreEntitySet="TblDeneyimlerim">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Baslik" ColumnName="Baslik" />
+          <ScalarProperty Name="AltBaslik" ColumnName="AltBaslik" />
+          <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+          <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblEgitimlerim">
+      <EntityTypeMapping TypeName="IsTypeOf(DbCvModel.TblEgitimlerim)">
+        <MappingFragment StoreEntitySet="TblEgitimlerim">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Baslik" ColumnName="Baslik" />
+          <ScalarProperty Name="AltBaslik1" ColumnName="AltBaslik1" />
+          <ScalarProperty Name="AltBaslik2" ColumnName="AltBaslik2" />
+          <ScalarProperty Name="GenelNotOrtalamasi" ColumnName="GenelNotOrtalamasi" />
+          <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblHakkimda">
+      <EntityTypeMapping TypeName="IsTypeOf(DbCvModel.TblHakkimda)">
+        <MappingFragment StoreEntitySet="TblHakkimda">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Ad" ColumnName="Ad" />
+          <ScalarProperty Name="Soyad" ColumnName="Soyad" />
+          <ScalarProperty Name="Adres" ColumnName="Adres" />
+          <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+          <ScalarProperty Name="Mail" ColumnName="Mail" />
+          <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+          <ScalarProperty Name="Aciklama2" ColumnName="Aciklama2" />
+          <ScalarProperty Name="Gorsel" ColumnName="Gorsel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblHobilerim">
+      <EntityTypeMapping TypeName="IsTypeOf(DbCvModel.TblHobilerim)">
+        <MappingFragment StoreEntitySet="TblHobilerim">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Aciklama1" ColumnName="Aciklama1" />
+          <ScalarProperty Name="Aciklama2" ColumnName="Aciklama2" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblIletisim">
+      <EntityTypeMapping TypeName="IsTypeOf(DbCvModel.TblIletisim)">
+        <MappingFragment StoreEntitySet="TblIletisim">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AdSoyad" ColumnName="AdSoyad" />
+          <ScalarProperty Name="Mail" ColumnName="Mail" />
+          <ScalarProperty Name="Konu" ColumnName="Konu" />
+          <ScalarProperty Name="Mesaj" ColumnName="Mesaj" />
+          <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblSertifikalarim">
+      <EntityTypeMapping TypeName="IsTypeOf(DbCvModel.TblSertifikalarim)">
+        <MappingFragment StoreEntitySet="TblSertifikalarim">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+          <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblYeteneklerim">
+      <EntityTypeMapping TypeName="IsTypeOf(DbCvModel.TblYeteneklerim)">
+        <MappingFragment StoreEntitySet="TblYeteneklerim">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Yetenek" ColumnName="Yetenek" />
+          <ScalarProperty Name="Oran" ColumnName="Oran" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblSosyalMedya">
+      <EntityTypeMapping TypeName="IsTypeOf(DbCvModel.TblSosyalMedya)">
+        <MappingFragment StoreEntitySet="TblSosyalMedya">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Ad" ColumnName="Ad" />
+          <ScalarProperty Name="Link" ColumnName="Link" />
+          <ScalarProperty Name="Ikon" ColumnName="Ikon" />
+          <ScalarProperty Name="Durum" ColumnName="Durum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
   </edmx:Runtime>
   <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
   <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
@@ -329,7 +328,7 @@
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
         <DesignerProperty Name="EnablePluralization" Value="false" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
-        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
       </DesignerInfoPropertySet>
     </Options>
